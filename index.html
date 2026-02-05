@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Prism - Perfect OCR</title>
+  <meta name="description" content="PRISM. is ruthless OCR. Extract precise, structured data from any scan. No fluff, just results.">
+
+  <!-- Preload critical fonts -->
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="./font/N27 Webfont Roman/webfont files/n27-regular-webfont.woff2">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./font/N27 Webfont Roman/webfont files/stylesheet.css">
+  <link rel="stylesheet" href="./font/niveau-grotesk/stylesheet.css">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./contact-form.css">
+</head>
+<body>
+  <!-- Skip link for accessibility -->
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <div class="page">
+    <!-- Header -->
+    <header class="section header">
+      <div class="section-inner">
+        <nav class="nav">
+          <div class="nav-logo">PRISM. <span class="nav-logo-sub">by untxt.</span><span class="version-badge"><span class="version-num">0.9</span> <span class="version-beta">beta</span></span></div>
+          <div class="nav-buttons">
+            <a href="/login" class="button button-primary">Login</a>
+            <a href="/register" class="button button-secondary">Register</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Section 1: Perfect OCR (Hero) -->
+      <section class="section section-1" id="hero">
+        <div class="section-inner">
+          <div class="hero-content">
+            <div class="main-col">
+              <h1><span class="hero-line-1">TEXT-TO-DATA FROM ANY SCAN.</span></h1>
+              <p>You're about to reclaim the hours you've lost to manual data entry last month.</p>
+              <p><strong>PRISM.</strong> is ruthless and smart: handwritten scribbles, tangled forms, or a receipt from the bottom of a drawer. It crushes them all, delivering precise, usable data without the fluff.</p>
+              <div class="actions">
+                <a href="/login" class="button button-primary">Try it free</a>
+                <a href="#pricing" class="button button-secondary">Pricing</a>
+              </div>
+            </div>
+            <div class="hero-images">
+              <div class="image-comparison-slider" id="hero-image-slider">
+                <!-- JSON output panel (background/right side - always visible) -->
+                <div class="comparison-image comparison-before json-output-panel">
+                  <div class="json-output-header">
+                    <span class="json-output-type">Declarations Page</span>
+                    <span class="json-output-confidence">22 fields extracted</span>
+                  </div>
+                  <div class="json-output-fields">
+                    <div class="json-field">
+                      <span class="json-key">Policy Number</span>
+                      <span class="json-value">4382-82-61-23</span>
+                    </div>
+                    <div class="json-field">
+                      <span class="json-key">Date Issued</span>
+                      <span class="json-value">August 18, 2023</span>
+                    </div>
+                    <div class="json-field">
+                      <span class="json-key">Company Name</span>
+                      <span class="json-value">GEICO Indemnity Company</span>
+                    </div>
+                    <div class="json-field">
+                      <span class="json-key">Company Address</span>
+                      <span class="json-value">One GEICO Boulevard, Fredericksburg, VA 22412-0003</span>
+                    </div>
+                    <div class="json-field">
+                      <span class="json-key">Phone</span>
+                      <span class="json-value">1-800-841-3000</span>
+                    </div>
+                    <div class="json-field">
+                      <span class="json-key">Customer Name</span>
+                      <span class="json-value">MARIA Y SO AND THOMAS FRANKNER</span>
+                    </div>
+                    <div class="json-field">
+                      <span class="json-key">Customer Address</span>
+                      <span class="json-value">10 MILLRIDGE DR, LIVINGSTON NJ 07039-1822</span>
+                    </div>
+                    <div class="json-field">
+                      <span class="json-key">Email</span>
+                      <span class="json-value">jessysu@yahoo.com</span>
+                    </div>
+                    <div class="json-field">
+                      <span class="json-key">Coverage Period</span>
+                      <span class="json-value">09-26-23 through 03-26-24</span>
+                    </div>
+                    <div class="json-field">
+                      <span class="json-key">Additional Drivers</span>
+                      <span class="json-value">Emma M Frankner, Benjamin W Frankner</span>
+                    </div>
+                    <div class="json-field">
+                      <span class="json-key">Vehicle 1</span>
+                      <span class="json-value">2011 Honda Pilot, VIN: 5FNYF4H91BB072648</span>
+                    </div>
+                    <div class="json-field">
+                      <span class="json-key">Vehicle 2</span>
+                      <span class="json-value">2017 Honda Accord, VIN: 1HGCR2F34HA091527</span>
+                    </div>
+                    <div class="json-field">
+                      <span class="json-key">Bodily Injury Liability</span>
+                      <span class="json-value">$100,000/$300,000</span>
+                    </div>
+                    <div class="json-field">
+                      <span class="json-key">Property Damage Liability</span>
+                      <span class="json-value">$50,000</span>
+                    </div>
+                    <div class="json-field">
+                      <span class="json-key">PIP Full Health Primary</span>
+                      <span class="json-value">Option A, $15,000, $250 Ded</span>
+                    </div>
+                    <div class="json-field">
+                      <span class="json-key">Uninsured & Underinsured</span>
+                      <span class="json-value">$100,000/$300,000</span>
+                    </div>
+                    <div class="json-field">
+                      <span class="json-key">Underinsured Property</span>
+                      <span class="json-value">$25,000</span>
+                    </div>
+                    <div class="json-field">
+                      <span class="json-key">Collision</span>
+                      <span class="json-value">$1,000 Ded</span>
+                    </div>
+                    <div class="json-field">
+                      <span class="json-key">Emergency Road Service</span>
+                      <span class="json-value">ERS COLL</span>
+                    </div>
+                    <div class="json-field">
+                      <span class="json-key">Six Month Premium</span>
+                      <span class="json-value">$1,328.50, $1,025.30</span>
+                    </div>
+                    <div class="json-field">
+                      <span class="json-key">Total Six Month Premium</span>
+                      <span class="json-value">$2,353.80</span>
+                    </div>
+                    <div class="json-field">
+                      <span class="json-key">Tier</span>
+                      <span class="json-value">D</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- AFTER PRISM label wrapper (clips from right) -->
+                <div class="comparison-before-label-wrapper">
+                  <div class="comparison-label comparison-label--after-bg">AFTER PRISM.</div>
+                </div>
+
+                <!-- Original image (foreground/left side - clipped by slider position) -->
+                <div class="comparison-after-wrapper">
+                  <div class="comparison-label comparison-label--before">BEFORE PRISM.</div>
+                  <img class="comparison-image comparison-after" src="./pics/untxtscans-page-14_kvp.png" alt="Original insurance document scan" loading="eager">
+                </div>
+
+                <!-- Draggable divider line with handle -->
+                <div class="comparison-slider-divider" tabindex="0" role="slider" aria-label="Drag to compare images" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+                  <div class="comparison-slider-handle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<!-- Section 2: The Three Outputs (section-3 in CSS) -->
+      <section class="section section-3 section-3--wide" id="outputs">
+        <div class="section-inner">
+          <div class="output-layout">
+            <!-- LEFT SIDEBAR: Header + Info Cards -->
+            <div class="output-sidebar">
+              <h2>Outputs Designed to Deliver Real Wins.<br>Precise, Flexible, and Built for Action.</h2>
+
+              <div class="output-info-cards">
+                <div class="output-info-card">
+                  <h4>Structured JSON</h4>
+                  <p>Extracts the exact data you need for automations. Consistent structure means your systems integrate effortlessly, slashing manual work and accelerating results.</p>
+                </div>
+                <div class="output-info-card">
+                  <h4>Clean Text</h4>
+                  <p>Strips away the noise for pure, actionable text. Export-ready in TXT, RTF, DOCX, Pages, or your preferred format. Turning messy scans into tools that save hours.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT: TABS + SLIDER -->
+            <div class="output-main">
+              <!-- Horizontal tabs above slider -->
+              <div class="output-tabs-horizontal">
+                <button class="tab-btn-horizontal active" data-tab="json">Structured JSON</button>
+                <button class="tab-btn-horizontal" data-tab="clean">Clean Text</button>
+              </div>
+
+              <div class="tab-content-wrapper">
+                <!-- JSON Tab - Full comparison slider -->
+                <div class="tab-content active" data-tab-content="json">
+                  <div class="output-comparison-container">
+                    <div class="image-comparison-slider output-slider" id="json-output-slider">
+                      <!-- JSON output panel (background/right side - AFTER PRISM) -->
+                      <div class="comparison-image comparison-before json-output-panel">
+                        <div class="json-output-header">
+                          <span class="json-output-type">Declarations Page</span>
+                          <span class="json-output-confidence">22 fields extracted</span>
+                        </div>
+                        <div class="json-output-fields">
+                          <div class="json-field"><span class="json-key">Policy Number</span><span class="json-value">4382-82-61-23</span></div>
+                          <div class="json-field"><span class="json-key">Date Issued</span><span class="json-value">August 18, 2023</span></div>
+                          <div class="json-field"><span class="json-key">Company Name</span><span class="json-value">GEICO Indemnity Company</span></div>
+                          <div class="json-field"><span class="json-key">Company Address</span><span class="json-value">One GEICO Boulevard, Fredericksburg, VA 22412-0003</span></div>
+                          <div class="json-field"><span class="json-key">Phone</span><span class="json-value">1-800-841-3000</span></div>
+                          <div class="json-field"><span class="json-key">Customer Name</span><span class="json-value">MARIA Y SO AND THOMAS FRANKNER</span></div>
+                          <div class="json-field"><span class="json-key">Customer Address</span><span class="json-value">10 MILLRIDGE DR, LIVINGSTON NJ 07039-1822</span></div>
+                          <div class="json-field"><span class="json-key">Email</span><span class="json-value">jessysu@yahoo.com</span></div>
+                          <div class="json-field"><span class="json-key">Coverage Period</span><span class="json-value">09-26-23 through 03-26-24</span></div>
+                          <div class="json-field"><span class="json-key">Additional Drivers</span><span class="json-value">Emma M Frankner, Benjamin W Frankner</span></div>
+                          <div class="json-field"><span class="json-key">Vehicle 1</span><span class="json-value">2011 Honda Pilot, VIN: 5FNYF4H91BB072648</span></div>
+                          <div class="json-field"><span class="json-key">Vehicle 2</span><span class="json-value">2017 Honda Accord, VIN: 1HGCR2F34HA091527</span></div>
+                          <div class="json-field"><span class="json-key">Bodily Injury Liability</span><span class="json-value">$100,000/$300,000</span></div>
+                          <div class="json-field"><span class="json-key">Property Damage Liability</span><span class="json-value">$50,000</span></div>
+                          <div class="json-field"><span class="json-key">PIP Full Health Primary</span><span class="json-value">Option A, $15,000, $250 Ded</span></div>
+                          <div class="json-field"><span class="json-key">Uninsured & Underinsured</span><span class="json-value">$100,000/$300,000</span></div>
+                          <div class="json-field"><span class="json-key">Underinsured Property</span><span class="json-value">$25,000</span></div>
+                          <div class="json-field"><span class="json-key">Collision</span><span class="json-value">$1,000 Ded</span></div>
+                          <div class="json-field"><span class="json-key">Emergency Road Service</span><span class="json-value">ERS COLL</span></div>
+                          <div class="json-field"><span class="json-key">Six Month Premium</span><span class="json-value">$1,328.50, $1,025.30</span></div>
+                          <div class="json-field"><span class="json-key">Total Six Month Premium</span><span class="json-value">$2,353.80</span></div>
+                          <div class="json-field"><span class="json-key">Tier</span><span class="json-value">D</span></div>
+                        </div>
+                      </div>
+
+                      <!-- AFTER PRISM label wrapper -->
+                      <div class="comparison-before-label-wrapper">
+                        <div class="comparison-label comparison-label--after-bg">AFTER PRISM.</div>
+                      </div>
+
+                      <!-- Original scan (foreground/left side - BEFORE PRISM) -->
+                      <div class="comparison-after-wrapper">
+                        <div class="comparison-label comparison-label--before">BEFORE PRISM.</div>
+                        <img class="comparison-image comparison-after" src="./pics/untxtscans-page-14_kvp.png" alt="Original insurance document scan" loading="lazy">
+                      </div>
+
+                      <!-- Draggable divider -->
+                      <div class="comparison-slider-divider" tabindex="0" role="slider" aria-label="Drag to compare images" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+                        <div class="comparison-slider-handle">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Clean Tab - Full comparison slider -->
+                <div class="tab-content" data-tab-content="clean">
+                  <div class="output-comparison-container">
+                    <div class="image-comparison-slider output-slider" id="clean-output-slider">
+                      <!-- Clean text panel (background/right side - AFTER PRISM) -->
+                      <div class="comparison-image comparison-before clean-output-panel">
+                        <div class="clean-text-content">Continental Airlines
+OnePass
+
+Welcome To OnePass®
+
+YOUR PIN IS: 1462
+You will need your PIN for all OnePass transactions.
+
+Dear Mr. Frankstein:
+
+Thanks for enrolling in OnePass, voted frequent flyer "Program of the Year" and winner of six coveted Freddie Awards from InsideFlyer magazine. As a OnePass member, you can now earn miles toward free travel -- and seat upgrades -- to more than 500 destinations on five continents. Plus, with over 35 airline, hotel, car rental, credit card and telecommunications partners to choose from, you will see how fast OnePass miles add up.
+
+To receive credit for OnePass miles: When making reservations, at check-in and when using car rental and hotel partner services, always provide your OnePass account number, printed on the attached membership card.
+
+To redeem OnePass miles: Call the Reward Desk and provide your OnePass account number and Personal Identification Number (PIN) 1462, printed above and on the attached telephone file card sticker. You will not be able to redeem travel rewards without your PIN, so be sure to keep it in a safe place for easy reference. To select your own PIN, call 1-713-785-2899 and choose option 13.
+
+Take Advantage Of Special Offers For Immediate Benefits.
+
+Purchase OnePass benefits -- and keep earning miles -- with these special offers: Prestige Pack or Executive Pack. Start using OnePass benefits before you start earning miles by purchasing the Prestige Pack or the Executive Pack. These Packs include valuable upgrades, discounted air travel and special partner offers to enhance your OnePass travel now. Plus, get up to 7,500 bonus miles just for ordering.
+
+We look forward to providing you with outstanding service and mileage toward exciting OnePass travel rewards, every time you fly with us.
+
+Sincerely,
+Richard H. Metzner
+Vice President, Marketing Programs
+
+P.S. Be sure to visit our Web site at http://www.continental.com.
+
+OnePass Service Center
+P.O. Box 4365, Houston, TX 77210-4365
+Work Hard. Fly Right.™</div>
+                      </div>
+
+                      <!-- AFTER PRISM label wrapper -->
+                      <div class="comparison-before-label-wrapper">
+                        <div class="comparison-label comparison-label--after-bg">AFTER PRISM.</div>
+                      </div>
+
+                      <!-- Original scan (foreground/left side - BEFORE PRISM) -->
+                      <div class="comparison-after-wrapper">
+                        <div class="comparison-label comparison-label--before">BEFORE PRISM.</div>
+                        <img class="comparison-image comparison-after" src="./pics/untxtscans-page-17_text.png" alt="Original Continental Airlines letter scan" loading="lazy">
+                      </div>
+
+                      <!-- Draggable divider -->
+                      <div class="comparison-slider-divider" tabindex="0" role="slider" aria-label="Drag to compare images" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+                        <div class="comparison-slider-handle">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Proof Is Personal (section-4 in CSS) -->
+      <section class="section section-4" id="built-for">
+        <div class="section-inner">
+          <div class="main-col">
+            <h2>Proof Hits Different When It's Yours.</h2>
+            <p>Skip the typical logo showcase. We're not relying on name-drops to convince you.</p>
+            <p>If <strong>PRISM.</strong> handles your scans better, you'll know it right away. If not, no amount of testimonials will change that.</p>
+            <p>Drop in your toughest scan. Experience the difference. Make the call yourself.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Pricing (section-5 in CSS) -->
+      <section class="section section-5" id="pricing">
+        <div class="section-inner">
+          <div class="main-col">
+            <div class="pricing-intro">
+              <h2>Invest in Outputs That Pay You Back.</h2>
+              <p>Five plans.<br>
+              Same powerhouse product.<br>
+              Same laser accuracy.</p>
+              <p>This isn't an expense. It's leverage. For every page you process, factor in the hours saved on extraction, editing, and integration. At your volume, it compounds to massive returns.</p>
+            </div>
+
+            <!-- Pricing Tabs (Monthly/Yearly Switcher) -->
+            <div class="pricing-tabs">
+              <button class="pricing-tab-header active" data-pricing-tab="monthly">Monthly</button>
+              <button class="pricing-tab-header" data-pricing-tab="yearly">Yearly</button>
+            </div>
+
+            <!-- 5-Card Grid: Per Page + 3 Subscription + Custom -->
+            <div class="pricing-grid">
+
+              <!-- Per Page Card (always visible) -->
+              <div class="pricing-card">
+                <h3>Per Page</h3>
+                <div class="price">$0.12</div>
+                <div class="price-detail">per page</div>
+                <ul class="pricing-features">
+                  <li>No monthly commitment – test drive risk-free.</li>
+                  <li>Pro-level accuracy and results, identical to top plans.</li>
+                  <li>Ideal for one-off projects or dipping your toe in.</li>
+                  <li>Only pay for what you process – starts paying you back instantly in time saved.</li>
+                </ul>
+                <a href="/login" class="button button-secondary">Get Started</a>
+              </div>
+
+              <!-- Monthly Plans (Small, Medium, Large) -->
+              <div class="pricing-tab-content active" data-pricing-tab-content="monthly">
+                <div class="pricing-card">
+                  <h3>Small</h3>
+                  <div class="price">$19</div>
+                  <div class="price-detail">per month</div>
+                  <ul class="pricing-features">
+                    <li>Process ~60 pages/week (~250/month).</li>
+                    <li>Built for solo freelancers crushing client work.</li>
+                    <li>Save ~10-15 hours/month (worth $500-750 at $50/hour rates).</li>
+                    <li>Cancel anytime, no questions – get your life back without the hassle.</li>
+                  </ul>
+                  <a href="/login" class="button button-primary">Choose Small</a>
+                </div>
+
+                <div class="pricing-card pricing-card-featured">
+                  <div class="featured-badge">Best Value</div>
+                  <h3>Medium</h3>
+                  <div class="price">$59</div>
+                  <div class="price-detail">per month</div>
+                  <ul class="pricing-features">
+                    <li>Handle ~250 pages/week (~1,000/month).</li>
+                    <li>Designed for small teams scaling operations.</li>
+                    <li>Reclaim ~40-50 hours/month (worth $2,000-2,500 in billable time).</li>
+                    <li>Priority support to keep you moving – because downtime costs money.</li>
+                  </ul>
+                  <a href="/login" class="button button-primary">Choose Medium</a>
+                </div>
+
+                <div class="pricing-card">
+                  <h3>Large</h3>
+                  <div class="price">$149</div>
+                  <div class="price-detail">per month</div>
+                  <ul class="pricing-features">
+                    <li>Tackle ~750 pages/week (~3,000/month).</li>
+                    <li>Engineered for agencies and high-volume ops teams.</li>
+                    <li>Unlock ~120-150 hours/month (worth $6,000-7,500 in productivity gains).</li>
+                    <li>Dedicated support line – treat it like your secret weapon for growth.</li>
+                  </ul>
+                  <a href="/login" class="button button-primary">Choose Large</a>
+                </div>
+              </div>
+
+              <!-- Yearly Plans (Small, Medium, Large) -->
+              <div class="pricing-tab-content" data-pricing-tab-content="yearly">
+                <div class="pricing-card">
+                  <h3>Small</h3>
+                  <div class="price">$190</div>
+                  <div class="price-detail">per year</div>
+                  <ul class="pricing-features">
+                    <li>Process ~60 pages/week (~250/month).</li>
+                    <li>Built for solo freelancers crushing client work.</li>
+                    <li>Save ~10-15 hours/month (worth $500-750 at $50/hour rates).</li>
+                    <li>Cancel anytime, no questions – get your life back without the hassle.</li>
+                  </ul>
+                  <a href="/login" class="button button-primary">Choose Small</a>
+                </div>
+
+                <div class="pricing-card pricing-card-featured">
+                  <div class="featured-badge">Best Value</div>
+                  <h3>Medium</h3>
+                  <div class="price">$590</div>
+                  <div class="price-detail">per year</div>
+                  <ul class="pricing-features">
+                    <li>Handle ~250 pages/week (~1,000/month).</li>
+                    <li>Designed for small teams scaling operations.</li>
+                    <li>Reclaim ~40-50 hours/month (worth $2,000-2,500 in billable time).</li>
+                    <li>Priority support to keep you moving – because downtime costs money.</li>
+                  </ul>
+                  <a href="/login" class="button button-primary">Choose Medium</a>
+                </div>
+
+                <div class="pricing-card">
+                  <h3>Large</h3>
+                  <div class="price">$1,490</div>
+                  <div class="price-detail">per year</div>
+                  <ul class="pricing-features">
+                    <li>Tackle ~750 pages/week (~3,000/month).</li>
+                    <li>Engineered for agencies and high-volume ops teams.</li>
+                    <li>Unlock ~120-150 hours/month (worth $6,000-7,500 in productivity gains).</li>
+                    <li>Dedicated support line – treat it like your secret weapon for growth.</li>
+                  </ul>
+                  <a href="/login" class="button button-primary">Choose Large</a>
+                </div>
+              </div>
+
+              <!-- Custom Card (always visible) -->
+              <div class="pricing-card">
+                <h3>Custom</h3>
+                <div class="price">Let's chat</div>
+                <div class="price-detail">for high-volume teams</div>
+                <ul class="pricing-features">
+                  <li>Unlimited pages – no caps, ever.</li>
+                  <li>Tailored for enterprises and complex workflows.</li>
+                  <li>Custom speeds, SLAs, and integrations that multiply your ROI.</li>
+                  <li>White-glove setup and ongoing optimization – let's build your empire together.</li>
+                </ul>
+                <a href="/login" class="button button-secondary">Contact Us</a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Try It Now (section-7 in CSS) -->
+      <section class="section section-7" id="try-it">
+        <div class="section-inner">
+          <div class="main-col text-center">
+            <h2>Primed for when your old OCR chokes.</h2>
+            <p>Throw <strong>PRISM.</strong> your ugliest document.</p>
+            <p>If it doesn't smoke what you're using now, stick with the status quo.</p>
+            <p>(But trust me. It will dominate.)</p>
+            <div class="actions">
+              <a href="/login" class="button button-primary">Upload Document</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="section footer">
+      <div class="section-inner">
+        <div class="footer-content">
+          <div class="footer-col">
+            <h4>Product</h4>
+            <ul class="footer-links">
+              <li><a href="#outputs">Outputs</a></li>
+              <li><a href="#pricing">Pricing</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <ul class="footer-links">
+              <li><a href="#privacy">Privacy Policy</a></li>
+              <li><a href="/terms.html">Terms of Service</a></li>
+              <li><a href="#cookie-settings" id="footer-cookie-settings">Cookie Settings</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 PRISM. by UNTXT. <span class="version-badge"><span class="version-num">0.9</span> <span class="version-beta">beta</span></span></p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Contact Form Modal -->
+  <div id="contact-modal" class="contact-modal" role="dialog" aria-labelledby="contact-modal-title" aria-modal="true">
+    <div class="contact-modal__overlay" aria-hidden="true"></div>
+    <div class="contact-modal__content">
+      <button id="contact-modal-close" class="contact-modal__close" type="button" aria-label="Close contact form">
+        ×
+      </button>
+
+      <div class="contact-modal__inner">
+        <!-- Left Column: Contact Info -->
+        <div class="contact-info">
+          <h2 id="contact-modal-title" class="contact-info__title">Get in touch</h2>
+
+          <div class="contact-info__section">
+            <h3 class="contact-info__label">Email:</h3>
+            <p class="contact-info__text">contact@prism-ocr.com</p>
+          </div>
+
+          <div class="contact-info__section">
+            <h3 class="contact-info__label">Phone:</h3>
+            <p class="contact-info__text">+1 (555) 123-4567</p>
+          </div>
+
+          <div class="contact-info__section">
+            <h3 class="contact-info__label">Address:</h3>
+            <p class="contact-info__text">
+              123 Innovation Avenue, Suite 456<br>
+              Tech District, San Francisco, CA 94107<br>
+              United States
+            </p>
+          </div>
+
+          <div class="contact-info__social">
+            <h3 class="contact-info__label">Follow us</h3>
+            <div class="contact-social-links">
+              <a href="#" class="contact-social-link" aria-label="Instagram" title="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </a>
+              <a href="#" class="contact-social-link" aria-label="Facebook" title="Facebook">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
+              <a href="#" class="contact-social-link" aria-label="LinkedIn" title="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </a>
+              <a href="#" class="contact-social-link" aria-label="X (Twitter)" title="X">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Contact Form -->
+        <div class="contact-form-wrapper">
+          <form id="contact-form" class="contact-form">
+            <div class="contact-form__row">
+              <div class="contact-form__field">
+                <label for="contact-name" class="contact-form__label">Your Name</label>
+                <input
+                  type="text"
+                  id="contact-name"
+                  name="name"
+                  class="contact-form__input"
+                  placeholder="Your full name"
+                  required
+                  autocomplete="name"
+                >
+              </div>
+
+              <div class="contact-form__field">
+                <label for="contact-email" class="contact-form__label">Email address</label>
+                <input
+                  type="email"
+                  id="contact-email"
+                  name="email"
+                  class="contact-form__input"
+                  placeholder="Your email address"
+                  required
+                  autocomplete="email"
+                >
+              </div>
+            </div>
+
+            <div class="contact-form__field">
+              <label for="contact-message" class="contact-form__label">Message</label>
+              <textarea
+                id="contact-message"
+                name="message"
+                class="contact-form__textarea"
+                placeholder="Write something...."
+                required
+                rows="6"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="contact-form__submit button button-primary">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Terms of Service Modal -->
+  <div id="terms-modal" class="legal-modal" role="dialog" aria-labelledby="terms-modal-title" aria-modal="true">
+    <div class="legal-modal__overlay" aria-hidden="true"></div>
+    <div class="legal-modal__content">
+      <button id="terms-modal-close" class="legal-modal__close" type="button" aria-label="Close terms of service">
+        ×
+      </button>
+      <div class="legal-modal__inner">
+        <h1 id="terms-modal-title">Terms of Service</h1>
+        <p class="legal-modal__updated">Last updated: January 9, 2026</p>
+
+        <section>
+          <h2>1. Acceptance of Terms</h2>
+          <p>By accessing or using PRISM ("Service"), operated by [COMPANY NAME] ("Company", "we", "us", or "our"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree, do not use the Service. Acceptance may occur via clickwrap (e.g., checking "I Agree" during registration) or continued use.</p>
+          <p>We reserve the right to modify these Terms at any time. We will notify you of material changes via email or in-Service notice at least 30 days in advance. Continued use after changes constitutes acceptance. If you disagree with changes, you may terminate your account before they take effect.</p>
+        </section>
+
+        <section>
+          <h2>2. Description of Service</h2>
+          <p>PRISM is an optical character recognition (OCR) platform that converts scanned documents, images, and PDFs into structured, machine-readable data. The Service includes:</p>
+          <ul>
+            <li>Document upload and OCR processing</li>
+            <li>Text extraction and structuring into JSON format</li>
+            <li>Document storage and version management</li>
+            <li>Export capabilities in various formats</li>
+          </ul>
+          <p>The Service is provided on an "as is" and "as available" basis. We aim for 99% uptime (excluding scheduled maintenance, notified 48 hours in advance), measured monthly. If uptime falls below 95% in a month (excluding force majeure events), you will receive a 10% credit on your next billing cycle, applied automatically upon verified downtime. We reserve the right to modify, suspend, or discontinue any aspect at any time with notice for material changes.</p>
+        </section>
+
+        <section>
+          <h2>3. Account Registration & Eligibility</h2>
+          <p>To use certain features, you must register an account and provide accurate, current, and complete information. You agree to:</p>
+          <ul>
+            <li>Maintain password security and not share your account</li>
+            <li>Accept responsibility for all activities under your account</li>
+            <li>Notify us immediately of unauthorized use</li>
+          </ul>
+          <p>You must be at least 18 years old. By using the Service, you represent you meet this requirement and comply with all applicable laws, including U.S. export controls (e.g., Export Administration Regulations). You further represent that your use will not involve sanctioned countries, entities, or individuals under U.S. law (e.g., OFAC lists), and you will not export, re-export, or transfer any data in violation of such laws.</p>
+        </section>
+
+        <section>
+          <h2>4. Subscription & Payment Terms</h2>
+          <p>Pricing is on our pricing page in US dollars. Subscriptions bill in advance monthly/annually; pay-per-page based on usage. Subscriptions auto-renew unless cancelled at least 30 days before renewal. Cancel via account settings or email to support@[domain].com.</p>
+          <p>Refunds are non-refundable except as required by law (e.g., under certain state privacy rights). Unused credits do not roll over unless specified. We may change prices with 30 days' notice, effective next billing cycle. Overdue payments accrue 1.5% monthly interest.</p>
+        </section>
+
+        <section>
+          <h2>5. User Content & License Grant</h2>
+          <p>You retain ownership of documents, images, and content uploaded ("User Content"). By uploading, you grant us a limited, non-exclusive, royalty-free, worldwide license to process, store, and transmit User Content solely to provide and improve the Service (e.g., OCR processing, backups). This license ends upon deletion or account termination.</p>
+          <p>You represent you have rights to User Content and it complies with laws. We do not use User Content to train AI models without your opt-in consent. Do not upload sensitive data (e.g., PHI under HIPAA) without a separate agreement.</p>
+        </section>
+
+        <section>
+          <h2>6. Data Ownership, Processing & Security</h2>
+          <p>You own all data uploaded and extracted. We claim no ownership.</p>
+          <p><strong>Processing:</strong> As a service provider, we process data per these Terms and any Data Processing Addendum (DPA) or Business Associate Agreement (BAA) if applicable (e.g., for HIPAA-covered data). Contact legal@[domain].com for a DPA/BAA. We comply with applicable privacy laws as a processor (e.g., CCPA/CPRA, other state laws).</p>
+          <p><strong>Storage & Retention:</strong> Data is stored until deleted. Backups retained for 7 days. Upon termination, data retained 30 days for retrieval, then permanently deleted (with verification available upon request).</p>
+          <p><strong>Security:</strong> We use industry-standard measures (e.g., encryption in transit/at rest, access controls, regular audits). However, no system is 100% secure. In case of a data breach, we will notify affected users within 72 hours (or as required by law) and cooperate on remediation.</p>
+          <p><strong>Audit Rights:</strong> We may audit your use of the Service for compliance with these Terms upon reasonable notice (at least 14 days), limited to once per year unless we suspect a violation.</p>
+        </section>
+
+        <section>
+          <h2>7. Intellectual Property</h2>
+          <p>We own the Service, its content, features, OCR technology, algorithms, and trademarks. You may not use our marks without consent. Feedback you provide grants us a perpetual, irrevocable, royalty-free license to use it.</p>
+          <p><strong>DMCA Policy:</strong> If you believe content infringes your copyright, notify us at legal@[domain].com with: your contact info, description of work, location on Service, statement of good faith belief, and signature. We may remove infringing content and terminate repeat infringers.</p>
+        </section>
+
+        <section>
+          <h2>8. Prohibited Uses</h2>
+          <p>In addition to prior prohibitions, do not: upload sensitive personal data without agreement, use for AI training without rights, or violate export laws. Violations may lead to suspension/termination.</p>
+        </section>
+
+        <section>
+          <h2>9. Limitation of Liability</h2>
+          <p class="legal-highlight">TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE ARE NOT LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES (E.G., LOSS OF PROFITS, DATA). TOTAL LIABILITY IS CAPPED AT FEES PAID IN THE PRIOR 12 MONTHS.</p>
+          <p>Some jurisdictions limit this, so it may not apply to you.</p>
+        </section>
+
+        <section>
+          <h2>10. Disclaimer of Warranties</h2>
+          <p><strong>SERVICE IS "AS IS" WITHOUT WARRANTIES (E.G., MERCHANTABILITY, FITNESS, NON-INFRINGEMENT). WE DO NOT GUARANTEE UNINTERRUPTED/ERROR-FREE OPERATION, 100% OCR ACCURACY, OR MEETING YOUR REQUIREMENTS.</strong></p>
+          <p>We disclaim any liability for biases, errors, or outcomes from OCR results, including AI-processed data.</p>
+        </section>
+
+        <section>
+          <h2>11. Indemnification</h2>
+          <p>You indemnify, defend, and hold us harmless from claims arising from your use, User Content, violations of these Terms or third-party rights, or any data breaches caused by your actions or content (including reasonable attorneys' fees). If you are on an enterprise plan, you agree to maintain cyber liability insurance with at least $1,000,000 coverage and provide proof upon request.</p>
+          <p>We indemnify you for claims that the Service infringes third-party IP, subject to your prompt notice, cooperation, and our control of defense. Our indemnification obligations are capped at the liability limit in Section 9.</p>
+        </section>
+
+        <section>
+          <h2>12. Termination</h2>
+          <p>You may terminate anytime via settings or contact. No refunds for prepaid fees. We may suspend/terminate for violations or in good faith (with notice). Data retained 30 days post-termination.</p>
+        </section>
+
+        <section>
+          <h2>13. Privacy Rights</h2>
+          <p>We comply with applicable US privacy laws (e.g., CCPA/CPRA, Virginia CDPA, Colorado CPA). If a California (or other state) resident, you have rights to:</p>
+          <ul>
+            <li><strong>Know/Access:</strong> Categories/specific personal info collected, sources, purposes, disclosures.</li>
+            <li><strong>Delete:</strong> Request deletion (subject to exceptions).</li>
+            <li><strong>Opt-out:</strong> Of sale/sharing (we do not sell; use "Do Not Sell/Share My Personal Information" link or GPC signal).</li>
+            <li><strong>Correct:</strong> Inaccuracies in your data.</li>
+            <li><strong>Limit:</strong> Sensitive info use.</li>
+            <li><strong>Non-discrimination:</strong> For exercising rights.</li>
+          </ul>
+          <p>Submit requests via privacy@[domain].com or toll-free 1-800-[NUMBER]. We respond within 45 days (extendable to 90). Verification required. See our Privacy Policy for details. We do not sell info.</p>
+        </section>
+
+        <section>
+          <h2>14. Governing Law</h2>
+          <p>Governed by Delaware laws, without conflict provisions.</p>
+        </section>
+
+        <section>
+          <h2>15. Dispute Resolution</h2>
+          <p>Disputes resolved by binding AAA arbitration (no class actions). You may opt out within 30 days. Exceptions for IP injunctions. Informal resolution first.</p>
+        </section>
+
+        <section>
+          <h2>16. Modifications to Terms</h2>
+          <p>As in Section 1, with 30 days' notice for material changes.</p>
+        </section>
+
+        <section>
+          <h2>17. Miscellaneous</h2>
+          <ul>
+            <li><strong>Force Majeure:</strong> No liability for delays due to events beyond control (e.g., natural disasters, pandemics).</li>
+            <li><strong>Severability:</strong> Invalid provisions severed; remainder enforceable.</li>
+            <li><strong>Assignment:</strong> We may assign; you may not without consent.</li>
+            <li><strong>Entire Agreement:</strong> These Terms supersede prior agreements.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>18. Contact Information</h2>
+          <div class="legal-contact">
+            <p><strong>[COMPANY NAME]</strong></p>
+            <p>[ADDRESS]</p>
+            <p>Email: legal@[domain].com</p>
+          </div>
+        </section>
+
+        <p class="legal-modal__footer">By using PRISM, you acknowledge reading, understanding, and agreeing to these Terms.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="./main.js" type="module" defer></script>
+</body>
+</html>

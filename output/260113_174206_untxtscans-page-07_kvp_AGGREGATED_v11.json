@@ -1,0 +1,297 @@
+{
+  "document_type": "Statement of Charges and Payments",
+  "extraction_mode": "standardized_schema_aggregated_v11",
+  "languages_detected": [
+    "English"
+  ],
+  "extraction_reasoning": "V011 dynamic schema extraction",
+  "sectors_detected": [],
+  "fields": {
+    "header": [],
+    "supplier": [],
+    "customer": [],
+    "delivery": [],
+    "totals": [],
+    "payment": [],
+    "line_items": [
+      {
+        "Item Number": "1",
+        "Description": "Av Oasys 1 day",
+        "Quantity": "1",
+        "Unit Price": "94.00",
+        "Total Price": "94.00",
+        "confidence": "high"
+      },
+      {
+        "Item Number": "2",
+        "Description": "AV Oasys 1 Day Toric 90pk",
+        "Quantity": "1",
+        "Unit Price": "119.00",
+        "Total Price": "119.00",
+        "confidence": "high"
+      }
+    ],
+    "other": [
+      {
+        "visible_key": "Company Name",
+        "standardized_key": null,
+        "value": "Mark J. Roberts, O.D.",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Company Address",
+        "standardized_key": null,
+        "value": "450 Oak Avenue\nSpringfield, IL 62704-1520",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Phone",
+        "standardized_key": null,
+        "value": "217-555-0192",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Document Number",
+        "standardized_key": null,
+        "value": "193031",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Document Date",
+        "standardized_key": null,
+        "value": "8/23/2021",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Customer Name",
+        "standardized_key": null,
+        "value": "Roger K. Davis",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Customer Address",
+        "standardized_key": null,
+        "value": "459 Maple Avenue\nSummit, NJ 07901",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Patient Name",
+        "standardized_key": null,
+        "value": "Olivia Johnson",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Patient ID",
+        "standardized_key": null,
+        "value": "33912",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Provider",
+        "standardized_key": null,
+        "value": "Dr. Michael Thompson",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Provider Phone",
+        "standardized_key": null,
+        "value": "201-555-0123",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "License",
+        "standardized_key": null,
+        "value": "27OA00662600",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "NPI Number",
+        "standardized_key": null,
+        "value": "1316945108",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Home Phone",
+        "standardized_key": null,
+        "value": "(201) 555-0198",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Total Charges (Pat. Total + Ins. Total)",
+        "standardized_key": null,
+        "value": "213.00",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Billed to Insurance",
+        "standardized_key": null,
+        "value": "$150.00",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Sales Tax",
+        "standardized_key": null,
+        "value": "0.00",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Total Due",
+        "standardized_key": null,
+        "value": "0.00",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Payment Method",
+        "standardized_key": null,
+        "value": "Visa",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Email",
+        "standardized_key": null,
+        "value": "Lab@madisoneyesnj.com",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Patient #",
+        "standardized_key": null,
+        "value": "21808",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Statement Date",
+        "standardized_key": null,
+        "value": "8/23/2021",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Chart #",
+        "standardized_key": null,
+        "value": null,
+        "confidence": "high",
+        "required": false,
+        "found": false,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Check #",
+        "standardized_key": null,
+        "value": null,
+        "confidence": "high",
+        "required": false,
+        "found": false,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Amount Enclosed",
+        "standardized_key": null,
+        "value": null,
+        "confidence": "high",
+        "required": false,
+        "found": false,
+        "sector": null,
+        "sector_name": null
+      }
+    ]
+  },
+  "extraction_stats": {
+    "total_standardized_keys": 108,
+    "keys_found": 22,
+    "line_items_found": 2,
+    "required_keys": 5,
+    "required_keys_found": 0,
+    "completeness_pct": 20.4,
+    "required_completeness_pct": 0.0,
+    "sectors_matched": 0
+  }
+}

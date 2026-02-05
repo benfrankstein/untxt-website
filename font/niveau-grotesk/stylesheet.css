@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'NiveauGroteskBlack';
+  src: url('HvDTrial_NiveauGroteskBlack-BF64911743bb281.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NiveauGroteskBold';
+  src: url('HvDTrial_NiveauGroteskBold-BF64911743cfa16.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NiveauGroteskMedium';
+  src: url('HvDTrial_NiveauGroteskMedium-BF64911742e4998.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NiveauGroteskRegular';
+  src: url('HvDTrial_NiveauGroteskRegular-BF64911743824fb.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NiveauGroteskLight';
+  src: url('HvDTrial_NiveauGroteskLight-BF64911743cf48a.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NiveauGroteskExtraLight';
+  src: url('HvDTrial_NiveauGroteskExtraLight-BF64911743c983f.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}

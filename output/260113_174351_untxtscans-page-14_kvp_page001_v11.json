@@ -1,0 +1,251 @@
+{
+  "document_type": "Declarations Page",
+  "document_language": "English",
+  "extraction_mode": "v11_dynamic_schema",
+  "languages_detected": [
+    "English"
+  ],
+  "extraction_reasoning": "V011 dynamic schema extraction",
+  "fields": {
+    "header": [],
+    "supplier": [],
+    "customer": [],
+    "delivery": [],
+    "totals": [],
+    "payment": [],
+    "line_items": [],
+    "other": [
+      {
+        "visible_key": "Document Number",
+        "standardized_key": null,
+        "value": "4382-82-61-23",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Document Date",
+        "standardized_key": null,
+        "value": "August 18, 2023",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Company Name",
+        "standardized_key": null,
+        "value": "GEICO Indemnity Company",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Company Address",
+        "standardized_key": null,
+        "value": "One GEICO Boulevard, Fredericksburg, VA 22412-0003",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Phone",
+        "standardized_key": null,
+        "value": "1-800-841-3000",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Customer Name",
+        "standardized_key": null,
+        "value": "MARIA Y SO AND THOMAS FRANKNER",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Customer Address",
+        "standardized_key": null,
+        "value": "10 MILLRIDGE DR, LIVINGSTON NJ 07039-1822",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Email",
+        "standardized_key": null,
+        "value": "jessysu@yahoo.com",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Coverage Period",
+        "standardized_key": null,
+        "value": "09-26-23 through 03-26-24",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Additional Drivers",
+        "standardized_key": null,
+        "value": "Emma M Frankner, Benjamin W Frankner",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Vehicle 1",
+        "standardized_key": null,
+        "value": "2011 Honda Pilot, VIN: 5FNYF4H91BB072648, Location: LIVINGSTON NJ 07039-1822",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Vehicle 2",
+        "standardized_key": null,
+        "value": "2017 Honda Accord, VIN: 1HGCR2F34HA091527, Location: LIVINGSTON NJ 07039-1822",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Bodily Injury Liability",
+        "standardized_key": null,
+        "value": "$100,000/$300,000",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Property Damage Liability",
+        "standardized_key": null,
+        "value": "$50,000",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "PIP Full Health Primary",
+        "standardized_key": null,
+        "value": "Option A, $15,000, $250 Ded",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Uninsured & Underinsured Motorists",
+        "standardized_key": null,
+        "value": "$100,000/$300,000",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Underinsured Motorist Property Damage",
+        "standardized_key": null,
+        "value": "$25,000",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Collision",
+        "standardized_key": null,
+        "value": "$1,000 Ded",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Emergency Road Service",
+        "standardized_key": null,
+        "value": "ERS COLL",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Six Month Premium Per Vehicle",
+        "standardized_key": null,
+        "value": "$1,328.50, $1,025.30",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Total Six Month Premium",
+        "standardized_key": null,
+        "value": "$2,353.80",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      },
+      {
+        "visible_key": "Tier",
+        "standardized_key": null,
+        "value": "D",
+        "confidence": "high",
+        "required": false,
+        "found": true,
+        "sector": null,
+        "sector_name": null
+      }
+    ]
+  },
+  "sectors_detected": [],
+  "extraction_stats": {
+    "total_standardized_keys": 0,
+    "keys_found": 22,
+    "line_items_found": 0,
+    "required_keys": 5,
+    "required_keys_found": 0,
+    "completeness_pct": 0,
+    "required_completeness_pct": 0.0,
+    "sectors_matched": 0
+  }
+}

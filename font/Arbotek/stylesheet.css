@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'Arbotek-Ultra';
+  src: url('Arbotek-Ultra.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arbotek-Light';
+  src: url('Arbotek-Light.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arbotek-Thin';
+  src: url('Arbotek-Thin.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arbotek-LightRounded';
+  src: url('Arbotek-LightRounded.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

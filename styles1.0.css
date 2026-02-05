@@ -1,0 +1,1402 @@
+/* ================================
+   PRISM LANDING PAGE CSS
+   Based on GENAI STYLEGUIDE v1.0
+   ================================ */
+
+/* ============================================
+   1. RESET & BASE STYLES
+   ============================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: clamp(15px, 0.9vw + 11px, 18px);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'n27regular', system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #3a2a28;
+  background: #f3f0e7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+picture,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ============================================
+   2. CSS CUSTOM PROPERTIES (Styleguide)
+   ============================================ */
+
+:root {
+  /* Colors from Styleguide */
+  --color-bg: #f3f0e7;
+  --color-bg-surface: #ffffff;
+  --color-neutral: #aeaa97;
+  --color-text: #3a2a28;
+  --color-accent: #d3813f;
+
+  /* Shadows */
+  --shadow-soft: 0 4px 14px rgba(58, 42, 40, 0.08);
+  --shadow-medium: 0 10px 24px rgba(58, 42, 40, 0.12);
+
+  /* Layout */
+  --page-max: 72rem;
+  --page-pad-inline: clamp(1.5rem, 4vw, 3rem);
+  --reading-max: 68ch;
+
+  /* Spacing scale (8px base) */
+  --space-1: 0.5rem;  /* 8px */
+  --space-2: 1rem;    /* 16px */
+  --space-3: 1.5rem;  /* 24px */
+  --space-4: 2rem;    /* 32px */
+  --space-5: 3rem;    /* 48px */
+
+  /* Fluid type scale */
+  --step--1: 0.9rem;
+  --step-0: 1rem;
+  --step-1: clamp(1.1rem, 1.2vw, 1.25rem);
+  --step-2: clamp(1.4rem, 2vw, 1.9rem);
+  --step-3: clamp(2rem, 3vw, 2.6rem);
+  --step-4: clamp(2.6rem, 4vw, 3.4rem);
+
+  /* Button tokens (minimalist outline style) */
+  --btn-radius: 0.5rem;
+  --btn-padding-inline: 1.5rem;
+  --btn-height: 3rem; /* 48px */
+  --btn-height-large: 3.5rem; /* 56px */
+
+  /* Primary button (solid accent) */
+  --btn-primary-bg: #d3813f;
+  --btn-primary-bg-hover: #b86a30;
+  --btn-primary-bg-active: #9d5726;
+  --btn-primary-fg: #ffffff;
+
+  /* Secondary button (outline → visible fill) */
+  --btn-secondary-bg: transparent;
+  --btn-secondary-bg-hover: rgba(211, 129, 63, 0.18);
+  --btn-secondary-bg-active: rgba(211, 129, 63, 0.40);
+  --btn-secondary-fg: #d3813f;
+  --btn-secondary-fg-hover: #b86a30;
+  --btn-secondary-fg-active: #9d5726;
+  --btn-secondary-border: #d3813f;
+  --btn-secondary-border-hover: #b86a30;
+  --btn-secondary-border-active: #9d5726;
+
+  /* Disabled state */
+  --btn-disabled-opacity: 0.35;
+
+  /* Focus ring */
+  --focus-ring: #d3813f;
+  --focus-ring-offset: 3px;
+}
+
+/* ============================================
+   3. TYPOGRAPHY
+   ============================================ */
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0 0 0.5em;
+  font-family: 'n27bold', sans-serif;
+  font-weight: normal;
+  color: var(--color-text);
+  line-height: 1.15;
+}
+
+h1 {
+  font-family: 'n27bold', sans-serif;
+  font-size: var(--step-4);
+  line-height: 1.1;
+  max-width: 18ch;
+}
+
+h2 {
+  font-size: var(--step-3);
+  line-height: 1.25;
+  max-width: 28ch;
+}
+
+.section-7 .section-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.section-7 .main-col {
+  max-width: none;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.section-7 h2 {
+  margin: 0;
+}
+
+.section-7 p {
+  margin: 0;
+  max-width: none;
+}
+
+.section-7 .actions {
+  margin-top: var(--space-2);
+}
+
+h3 {
+  font-size: var(--step-2);
+  line-height: 1.3;
+}
+
+h4 {
+  font-size: var(--step-1);
+  font-family: 'n27medium', sans-serif;
+}
+
+p {
+  margin: 0 0 1em;
+  max-width: var(--reading-max);
+  line-height: 1.6;
+}
+
+small,
+.caption {
+  font-size: var(--step--1);
+  opacity: 0.75;
+}
+
+.eyebrow {
+  font-size: var(--step--1);
+  font-family: 'n27medium', sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+/* ============================================
+   4. LAYOUT STRUCTURE
+   ============================================ */
+
+.page {
+  width: 100%;
+  margin-inline: auto;
+}
+
+/* Section with colored borders for debugging */
+.section {
+  display: flex;
+  justify-content: center;
+  padding-block: var(--space-5);
+  border: 1px solid #ff0000; /* Red border for debugging */
+}
+
+.section-inner {
+  width: 100%;
+  max-width: var(--page-max);
+  padding-inline: var(--page-pad-inline);
+  border: 1px solid #00ff00; /* Green border for debugging */
+  position: relative;
+}
+
+.section-inner::after {
+  content: '2. SECTION-INNER (green)';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #00ff00;
+  color: black;
+  padding: 2px 6px;
+  font-size: 10px;
+  font-family: monospace;
+  z-index: 1000;
+}
+
+.main-col {
+  max-width: var(--reading-max);
+  margin-inline: auto;
+  container-type: inline-size;
+  border: 1px solid #0000ff; /* Blue border for debugging */
+  padding: var(--space-2);
+}
+
+/* Container-based type bump */
+@container (min-width: 40rem) {
+  .main-col p {
+    font-size: var(--step-1);
+  }
+}
+
+/* ============================================
+   5. COLORED SECTION BORDERS (Debug)
+   ============================================ */
+
+.header {
+  border-color: #ff00ff; /* Magenta */
+  background: var(--color-bg-surface);
+  padding-block: 10px !important;
+  position: relative;
+}
+
+.header .section-inner {
+  max-width: 100%;
+  padding-inline: 0;
+}
+
+.header .nav {
+  width: 100%;
+  max-width: 100%;
+  padding-inline: 0;
+}
+
+.header::after {
+  content: '1. HEADER (pink)';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ff00ff;
+  color: white;
+  padding: 2px 6px;
+  font-size: 10px;
+  font-family: monospace;
+  z-index: 1000;
+}
+
+.section-1 {
+  border-color: #ff0000; /* Red */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  padding-inline: 0;
+  padding-block: 20px;
+}
+
+.section-1 .section-inner {
+  max-width: var(--page-max);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.section-1::before {
+  content: '';
+  position: absolute;
+  inset: 20px 0;
+  width: 100%;
+  max-width: var(--page-max);
+  margin: 0 auto;
+  /* background-image: url('./pics/pexels-pixabay-261763.jpg'); */
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.section-1 .section-inner {
+  position: relative;
+}
+
+/* Hero two-column layout */
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  align-items: center;
+  width: 100%;
+  overflow: visible;
+}
+
+@media (min-width: 56rem) {
+  .hero-content {
+    grid-template-columns: 0.56fr 1fr;
+    gap: var(--space-2);
+  }
+}
+
+.section-1 .main-col {
+  position: relative;
+  z-index: 10;
+  text-align: left;
+  width: 100%;
+  flex-shrink: 0;
+  border: 1px solid #0000ff; /* Blue border for debugging */
+  padding: 0;
+}
+
+/* Hero images container */
+.hero-images {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 1;
+}
+
+/* Hero image - shared styles */
+.hero-image {
+  width: 52.875%;
+  max-width: none;
+  height: auto;
+  object-fit: contain;
+  border-radius: 1rem;
+  border: 1px solid #ff00ff; /* Magenta border for debugging */
+  cursor: pointer;
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ORI.png - fades in after Perfect OCR */
+.hero-image-ori {
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  animation: fadeIn 1.125s ease-out 2.6s forwards;
+}
+
+.hero-image-ori:hover {
+  transform: scale(1.25);
+}
+
+/* OCRed.png - starts sliding when ORI is at 80% opacity */
+.hero-image-ocred {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  opacity: 1;
+  transform: translateX(100%);
+  animation: fadeInAndSlideRight 0.9s cubic-bezier(0.9, 0, 0.1, 1) 3.5s backwards;
+}
+
+.hero-image-ocred:hover {
+  transform: translateX(100%) scale(1.25) !important;
+}
+
+
+@keyframes fadeInAndSlideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(100%);
+  }
+}
+
+.section-1 h1,
+.section-1 p {
+  margin-inline: 0;
+}
+
+.section-1 .actions {
+  justify-content: flex-start;
+  margin-top: 1.9em;
+}
+
+/* Hero section animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.section-1 h1 {
+  opacity: 1;
+  margin-bottom: 0.25em;
+  line-height: 1.1;
+}
+
+.hero-line-1,
+.hero-line-2,
+.hero-line-3 {
+  display: block;
+  font-size: inherit;
+  line-height: 1.1;
+  font-family: inherit;
+  font-weight: inherit;
+  margin: 0;
+  padding: 0;
+  height: auto;
+}
+
+.hero-line-1 {
+  mask-image: linear-gradient(to bottom, black 0%, black 50%, transparent 50%, transparent 100%);
+  mask-size: 100% 200%;
+  mask-position: 0% -100%;
+  animation: maskRevealDown 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;
+}
+
+.hero-line-2 {
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 0;
+  opacity: 1;
+  animation: typewriter 0.6s steps(10) 1.4s forwards;
+}
+
+.hero-line-3 {
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out 2.0s forwards;
+}
+
+@keyframes maskRevealDown {
+  from {
+    mask-position: 0% -100%;
+  }
+  to {
+    mask-position: 0% 0%;
+  }
+}
+
+@keyframes typewriter {
+  from {
+    max-width: 0;
+  }
+  to {
+    max-width: 100%;
+  }
+}
+
+.section-1 p {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.section-1 p:first-of-type {
+  animation-delay: 4.4s;
+}
+
+.section-1 p:nth-of-type(2) {
+  animation-delay: 4.6s;
+}
+
+.section-1 .actions .button {
+  opacity: 0;
+}
+
+.section-1 .actions .button:first-child {
+  animation: fadeInLeft 0.8s ease-out 4.8s forwards;
+}
+
+.section-1 .actions .button:last-child {
+  animation: fadeInRight 0.8s ease-out 4.8s forwards;
+}
+
+.section-2 {
+  border-color: #00ff00; /* Green */
+  background: #2a2220;
+  padding-block: var(--space-5) !important;
+  display: none;
+}
+
+/* Upload Area - entire section is interactive */
+.upload-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 36vh;
+  gap: var(--space-3);
+  cursor: pointer;
+  width: 100%;
+}
+
+.upload-circle {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid var(--btn-secondary-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  transition:
+    transform 300ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 200ms ease-out,
+    border-color 200ms ease-out;
+}
+
+/* Hover on entire area triggers bubble animation */
+.upload-area:hover .upload-circle {
+  transform: scale(1.08);
+  background: var(--btn-secondary-bg-hover);
+  border-color: var(--btn-secondary-border-hover);
+}
+
+.upload-area:active .upload-circle {
+  transform: scale(0.98);
+  background: var(--btn-secondary-bg-active);
+  border-color: var(--btn-secondary-border-active);
+}
+
+.upload-icon {
+  color: var(--color-accent);
+  transition: color 200ms ease-out;
+}
+
+.upload-area:hover .upload-icon {
+  color: var(--btn-secondary-fg-hover);
+}
+
+.upload-area:active .upload-icon {
+  color: var(--btn-secondary-fg-active);
+}
+
+.upload-text {
+  font-family: 'n27medium', sans-serif;
+  font-size: var(--step-1);
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.08em;
+  margin: 0;
+  text-align: center;
+}
+
+.upload-subtext {
+  font-family: 'n27regular', sans-serif;
+  font-size: var(--step-0);
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+  text-align: center;
+  opacity: 0;
+}
+
+/* Upload text animations */
+.upload-text-drag {
+  display: inline-block;
+  opacity: 0;
+}
+
+.upload-text-drop {
+  display: inline-block;
+  opacity: 0;
+}
+
+.upload-text-try {
+  display: inline-block;
+  opacity: 0;
+}
+
+/* Animations triggered on scroll */
+.section-2-visible .upload-text-drag {
+  animation: fadeInLeft 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;
+}
+
+.section-2-visible .upload-text-drop {
+  animation: fadeInDown 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.6s forwards;
+}
+
+.section-2-visible .upload-text-try {
+  animation: fadeIn 0.15s ease-out 1.2s forwards;
+}
+
+.section-2-visible .upload-subtext {
+  animation: fadeIn 0.8s ease-out 1.6s forwards;
+}
+
+/* Animation keyframes for upload text */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-3 {
+  border-color: #0000ff; /* Blue */
+  background: var(--color-bg-surface);
+}
+
+.section-4 {
+  border-color: #ffff00; /* Yellow */
+}
+
+.section-5 {
+  border-color: #ff00ff; /* Magenta */
+  background: var(--color-bg-surface);
+}
+
+.section-6 { border-color: #00ffff; } /* Cyan */
+
+.section-7 {
+  border-color: #ff8800; /* Orange */
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Beige background (default) - no override needed */
+}
+
+.footer {
+  border-color: #8800ff; /* Purple */
+  background: var(--color-text);
+}
+
+/* ============================================
+   6. NAVIGATION
+   ============================================ */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 0;
+  border: 1px solid #ffff00; /* Yellow border for debugging */
+  position: relative;
+}
+
+.nav::after {
+  content: '3. NAV (yellow)';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ffff00;
+  color: black;
+  padding: 2px 6px;
+  font-size: 10px;
+  font-family: monospace;
+  z-index: 1000;
+}
+
+.nav-logo {
+  font-family: 'n27bold', sans-serif;
+  font-size: var(--step-2);
+  color: var(--color-text);
+  padding-left: var(--space-3);
+}
+
+.nav-logo-sub {
+  font-family: 'n27regular', sans-serif;
+  font-size: calc(var(--step-2) * 0.5);
+  color: var(--color-neutral);
+  font-weight: normal;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: var(--space-2);
+  padding-right: var(--space-3);
+  align-items: center;
+}
+
+/* ============================================
+   7. BUTTONS (Minimalist outline style)
+   ============================================ */
+
+/* Base button – shared styles */
+.button {
+  /* Layout */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  /* Sizing (44x44 minimum hit area per WCAG) */
+  min-height: var(--btn-height);
+  padding: 0 var(--btn-padding-inline);
+  border-radius: var(--btn-radius);
+
+  /* Typography */
+  font: inherit;
+  font-family: 'n27medium', sans-serif;
+  font-size: var(--step-0);
+  text-decoration: none;
+  white-space: nowrap;
+
+  /* Reset */
+  border: none;
+  background: none;
+
+  /* Interaction */
+  cursor: pointer;
+  user-select: none;
+
+  /* Smooth transitions – flat design, no transforms */
+  transition:
+    background-color 200ms ease-out,
+    border-color 200ms ease-out,
+    color 200ms ease-out,
+    opacity 200ms ease-out;
+}
+
+/* === PRIMARY BUTTON (solid fill) === */
+
+.button-primary {
+  background-color: var(--btn-primary-bg);
+  color: var(--btn-primary-fg);
+  border: 2px solid var(--btn-primary-bg);
+}
+
+.button-primary:hover {
+  background-color: var(--btn-primary-bg-hover);
+  border-color: var(--btn-primary-bg-hover);
+}
+
+.button-primary:active {
+  background-color: var(--btn-primary-bg-active);
+  border-color: var(--btn-primary-bg-active);
+}
+
+/* === SECONDARY BUTTON (outline → fill on interaction) === */
+
+.button-secondary {
+  background-color: var(--btn-secondary-bg);
+  color: var(--btn-secondary-fg);
+  border: 2px solid var(--btn-secondary-border);
+}
+
+/* Hover: noticeable background tint + darker border/text */
+.button-secondary:hover {
+  background-color: var(--btn-secondary-bg-hover);
+  border-color: var(--btn-secondary-border-hover);
+  color: var(--btn-secondary-fg-hover);
+}
+
+/* Active/Pressed: solid background fill + darkest border/text */
+.button-secondary:active {
+  background-color: var(--btn-secondary-bg-active);
+  border-color: var(--btn-secondary-border-active);
+  color: var(--btn-secondary-fg-active);
+}
+
+/* === FOCUS STATE (keyboard navigation) === */
+
+.button:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: var(--focus-ring-offset);
+}
+
+/* === DISABLED STATE === */
+
+.button:disabled,
+.button[aria-disabled="true"] {
+  opacity: var(--btn-disabled-opacity);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* === LOADING STATE === */
+
+.button[aria-busy="true"] {
+  cursor: wait;
+  pointer-events: none;
+  position: relative;
+}
+
+.button[aria-busy="true"]::after {
+  content: '…';
+  position: absolute;
+  right: 0.75rem;
+}
+
+/* === SIZE VARIANTS === */
+
+.button-large {
+  min-height: var(--btn-height-large);
+  padding: 0 2rem;
+  font-size: var(--step-1);
+}
+
+/* === RESPECT REDUCED MOTION === */
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+/* ============================================
+   8. CARDS & SURFACES
+   ============================================ */
+
+.card {
+  background: var(--color-bg-surface);
+  border-radius: 0.75rem;
+  padding: var(--space-3);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(174, 170, 151, 0.4);
+}
+
+/* Tab interface for Three Outputs section */
+.section-3 .main-col {
+  max-width: 85ch;
+}
+
+.output-tabs {
+  margin-top: var(--space-4);
+}
+
+.tab-headers {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid var(--color-neutral);
+}
+
+.tab-header {
+  flex: 1;
+  padding: var(--space-2) var(--space-3);
+  background: none;
+  border: none;
+  font-family: 'n27bold', sans-serif;
+  font-size: var(--step-0);
+  color: var(--color-neutral);
+  cursor: pointer;
+  transition: color 200ms ease-out, border-color 200ms ease-out;
+  border-bottom: 3px solid transparent;
+  position: relative;
+  bottom: -2px;
+}
+
+.tab-header:hover {
+  color: var(--color-text);
+}
+
+.tab-header.active {
+  color: var(--color-text);
+  border-bottom-color: var(--color-accent);
+}
+
+.tab-content-wrapper {
+  padding: var(--space-4) 0;
+  position: relative;
+  min-height: 300px;
+}
+
+.tab-content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 400ms ease-out, transform 400ms ease-out;
+  position: absolute;
+  top: var(--space-4);
+  left: 0;
+  right: 0;
+  pointer-events: none;
+}
+
+.tab-content.active {
+  opacity: 1;
+  transform: translateY(0);
+  position: relative;
+  pointer-events: auto;
+}
+
+.tab-card {
+  background: var(--color-bg);
+  border-radius: 1rem;
+  padding: var(--space-4);
+  box-shadow: var(--shadow-medium);
+  border: 2px solid rgba(174, 170, 151, 0.2);
+}
+
+.tab-card h4 {
+  margin-top: 0;
+  margin-bottom: var(--space-2);
+  font-size: var(--step-2);
+}
+
+.tab-card p {
+  font-size: var(--step-0);
+  margin-bottom: var(--space-2);
+  line-height: 1.6;
+}
+
+.tab-card p:last-of-type {
+  margin-bottom: var(--space-3);
+}
+
+.tab-card .actions {
+  margin-top: var(--space-3);
+}
+
+/* ============================================
+   8B. SECTION SCROLL ANIMATIONS
+   ============================================ */
+
+/* Base state - hidden before scroll into view */
+.section-3 .section-inner,
+.section-4 .section-inner,
+.section-7 .section-inner {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 800ms cubic-bezier(0.4, 0, 0.2, 1),
+              transform 800ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section-3.section-visible .section-inner,
+.section-4.section-visible .section-inner,
+.section-7.section-visible .section-inner {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Pricing section heading */
+.section-5 .main-col > h2,
+.section-5 .main-col > p {
+  opacity: 0 !important;
+  transform: translateY(30px) !important;
+  transition: opacity 700ms cubic-bezier(0.4, 0, 0.2, 1),
+              transform 700ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section-5.section-visible .main-col > h2 {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.section-5.section-visible .main-col > p {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition-delay: 100ms;
+}
+
+/* Pricing cards staggered animation */
+.section-5 .pricing-card {
+  opacity: 0 !important;
+  transform: translateY(40px) !important;
+  transition: opacity 600ms cubic-bezier(0.4, 0, 0.2, 1),
+              transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section-5.section-visible .pricing-card:nth-child(1) {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition-delay: 200ms;
+}
+
+.section-5.section-visible .pricing-card:nth-child(2) {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition-delay: 300ms;
+}
+
+.section-5.section-visible .pricing-card:nth-child(3) {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition-delay: 400ms;
+}
+
+.section-5.section-visible .pricing-card:nth-child(4) {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition-delay: 500ms;
+}
+
+/* ============================================
+   9. PRICING SECTION
+   ============================================ */
+
+.section-5 .main-col {
+  max-width: 100%;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+@media (min-width: 48rem) {
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 72rem) {
+  .pricing-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.pricing-card {
+  background: var(--color-bg-surface);
+  border-radius: 1rem;
+  padding: var(--space-4);
+  box-shadow: var(--shadow-soft);
+  border: 2px solid rgba(174, 170, 151, 0.2);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+}
+
+.pricing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-medium);
+}
+
+.pricing-card-featured {
+  border-color: var(--color-accent);
+  border-width: 3px;
+}
+
+.featured-badge {
+  position: absolute;
+  top: -12px;
+  right: var(--space-3);
+  background: var(--color-accent);
+  color: var(--color-bg-surface);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-family: 'n27bold', sans-serif;
+  font-size: var(--step--1);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.pricing-card h3 {
+  margin: 0 0 var(--space-3);
+  font-size: var(--step-1);
+  text-align: center;
+}
+
+.price {
+  font-family: 'n27bold', sans-serif;
+  font-size: var(--step-4);
+  color: var(--color-accent);
+  text-align: center;
+  line-height: 1;
+  margin-bottom: var(--space-1);
+}
+
+.price-detail {
+  text-align: center;
+  color: var(--color-neutral);
+  font-size: var(--step--1);
+  margin-bottom: var(--space-3);
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-4);
+  flex-grow: 1;
+}
+
+.pricing-features li {
+  padding: var(--space-1) 0;
+  border-bottom: 1px solid rgba(174, 170, 151, 0.2);
+  font-size: var(--step--1);
+}
+
+.pricing-features li:last-child {
+  border-bottom: none;
+}
+
+.pricing-card .button {
+  width: 100%;
+  justify-content: center;
+}
+
+/* ============================================
+   10. STEPS SECTION
+   ============================================ */
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-block: var(--space-3);
+}
+
+.step {
+  display: flex;
+  gap: var(--space-2);
+  align-items: flex-start;
+}
+
+.step-number {
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-accent);
+  color: var(--color-bg-surface);
+  border-radius: 50%;
+  font-family: 'n27bold', sans-serif;
+  font-size: var(--step-1);
+}
+
+.step-content p {
+  margin: 0;
+}
+
+/* ============================================
+   10. FOOTER
+   ============================================ */
+
+.footer {
+  background: var(--color-text);
+  color: var(--color-bg-surface);
+  padding-block: var(--space-5);
+}
+
+.footer-content {
+  display: grid;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+@media (min-width: 48rem) {
+  .footer-content {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+.footer h4 {
+  font-size: var(--step-0);
+  font-family: 'n27medium', sans-serif;
+  color: var(--color-bg-surface);
+  margin-bottom: var(--space-2);
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: var(--space-1);
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--color-bg-surface);
+}
+
+.footer-bottom {
+  padding-top: var(--space-3);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: var(--step--1);
+}
+
+/* ============================================
+   11. UTILITIES
+   ============================================ */
+
+/* Text alignment */
+.text-center {
+  text-align: center;
+}
+
+.text-center h1,
+.text-center h2,
+.text-center h3 {
+  margin-inline: auto;
+}
+
+.text-center .actions {
+  justify-content: center;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  padding: 0.5rem 1rem;
+  background: var(--color-text);
+  color: var(--color-bg-surface);
+  z-index: 1000;
+  text-decoration: none;
+  font-family: 'n27medium', sans-serif;
+}
+
+.skip-link:focus {
+  left: 0.5rem;
+  top: 0.5rem;
+}
+
+/* ============================================
+   12. RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+@media (min-width: 40rem) {
+  .section {
+    padding-block: clamp(3.5rem, 7vh, 6rem);
+  }
+}
+
+@media (min-width: 56rem) {
+  main {
+    gap: var(--space-5);
+  }
+}
+
+@media (min-width: 72rem) {
+  :root {
+    --page-max: 80rem;
+  }
+}
+
+/* ============================================
+   13. MOTION PREFERENCES (NO ANIMATIONS)
+   ============================================ */
+
+/* All animations disabled for initial naked build (except hero section, buttons, upload area, and animated sections) */
+body :not(.section-1):not(.section-1 *):not(.section-2):not(.section-2 *):not(.section-3):not(.section-3 *):not(.section-4):not(.section-4 *):not(.section-5):not(.section-5 *):not(.section-7):not(.section-7 *):not(.button):not(.button *):not(.upload-circle):not(.upload-circle *) {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .section-1 h1,
+  .section-1 p,
+  .section-1 .actions,
+  .hero-line-1,
+  .hero-line-2,
+  .hero-line-3,
+  .hero-image-ori,
+  .hero-image-ocred,
+  .upload-text-drag,
+  .upload-text-drop,
+  .upload-text-try,
+  .upload-subtext {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    mask-position: 0% 0% !important;
+  }
+}
+
+/* ============================================
+   14. DEBUG BORDERS TOGGLE
+   ============================================ */
+
+/* Hide all debug borders and labels when body has hide-debug class */
+body.hide-debug .section,
+body.hide-debug .section-inner,
+body.hide-debug .main-col,
+body.hide-debug .hero-image,
+body.hide-debug .hero-image-ori,
+body.hide-debug .hero-image-ocred,
+body.hide-debug .nav {
+  border: none !important;
+}
+
+body.hide-debug .header::after,
+body.hide-debug .section-inner::after,
+body.hide-debug .nav::after {
+  display: none !important;
+}
+
+/* Debug toggle indicator */
+body::before {
+  content: 'Press "B" to toggle debug | "R" to replay hero animation';
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-family: monospace;
+  z-index: 10000;
+  opacity: 0;
+  pointer-events: none;
+}
+
+body:hover::before {
+  opacity: 0.7;
+}
+
+body.hide-debug::before {
+  content: 'Press "B" to show debug | "R" to replay hero animation';
+}
